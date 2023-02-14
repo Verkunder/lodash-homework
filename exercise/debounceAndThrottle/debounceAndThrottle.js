@@ -1,12 +1,11 @@
-import * as _ from 'lodash';
 const logScrollY = () => console.log(window.scrollY);
 
 // debounce
 
-const debounceLogScroll = _.debounce(logScrollY, 100);
+const debounceLogScroll = _.debounce(logScrollY, 1000);
 
 window.addEventListener('scroll', debounceLogScroll);
 
 // throttle
 
-window.addEventListener('scroll', _.throttle(logScrollY, 100));
+// window.addEventListener('scroll', _.throttle(logScrollY, 1000));
