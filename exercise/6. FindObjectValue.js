@@ -38,10 +38,10 @@ console.log({ oneQuestion });
 
 _.set(obj, 'address.geo.3', { lat: '0', lng: '0' });
 
-console.log(obj.address.geo[3]);
-
-console.log(obj.contactInfo.website[1]);
-
 _.unset(obj, 'contactInfo.website.1');
 
-console.log(obj.contactInfo.website);
+const deleteElement = _.omit(obj, 'contactInfo.website.1'); // или так, так безопаснее, так как создадим копию
+
+console.log(obj);
+
+console.log(deleteElement);
