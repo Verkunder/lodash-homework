@@ -36,4 +36,6 @@ const users = [
 
 const result = _.countBy(users, 'isActive');
 
+const result2 = _.mapValues(_.groupBy(users, 'isActive'), _.size);
+
 console.log(result);
