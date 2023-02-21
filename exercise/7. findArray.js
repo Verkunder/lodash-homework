@@ -60,9 +60,43 @@ const identicalObjects = _.intersectionWith(fruits1, fruits2, _.isEqual);
 
 console.log({ identicalObjects });
 
+/* 
+Ожидаемый результат 
+[
+  {
+    type: "orange",
+    color: "orange",
+    emoji: "🍊",
+  },
+  {
+    type: "peach",
+    color: "orange",
+    emoji: "🍑",
+  },
+]
+*/
+
 const intersectionBy = _.intersectionBy(fruits1, fruits2, 'type');
 
 console.log({ intersectionBy });
+
+/* 
+Ожидаемый результат
+
+[
+  {
+    type: "orange",
+    color: "orange",
+    emoji: "🍊",
+  },
+  {
+    type: "peach",
+    emoji: "🍑",
+    color: "orange",
+  },
+]
+
+*/
 
 const differenceWith = _.differenceWith(fruits1, fruits2, _.isEqual);
 
